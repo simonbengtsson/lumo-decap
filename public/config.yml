@@ -3,7 +3,7 @@ backend:
   branch: main
   repo: simonbengtsson/decap-picobase-vitepress
 
-media_folder: public/img
+media_folder: site/public/img
 public_folder: /img
 
 collections:
