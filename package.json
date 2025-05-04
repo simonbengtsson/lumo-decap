@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "wrangler dev",
     "build": "echo 'build'",
-    "picobase-build": "rm -rf dist && npm run build && npm run wrangler-dry-build && cp picobase.json dist/ && cp -r build/client dist/public && npm run make-pbapp",
+    "picobase-build": "rm -rf dist && npm run build && npm run wrangler-dry-build && cp picobase.json dist/ && cp -r public dist/public && npm run make-pbapp",
     "wrangler-dry-build": "wrangler deploy --dry-run --bundle --outdir dist",
-    "make-pbapp": "cd dist && zip -r ./app.pbapp . && mv ./app.pbapp ../"
+    "make-pbapp": "cd dist && zip -r ./app.pbapp . && mv ./app.pbapp ../ && cd .. && rm -rf dist"
   },
   "keywords": [],
   "author": "",
