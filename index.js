@@ -1,12 +1,53 @@
 import { parse } from "yaml";
 
+function renderBody(status, content) {
+  const html = `
+  <script>
+    const receiveMessage = (message) => {
+      window.opener.postMessage(
+        'authorization:github:${status}:${JSON.stringify(content)}',
+        message.origin
+      );
+      window.removeEventListener("message", receiveMessage, false);
+    }
+    window.addEventListener("message", receiveMessage, false);
+    window.opener.postMessage("authorizing:github", "*");
+  </script>
+  `;
+  const blob = new Blob([html]);
+  return blob;
+}
+
 export default {
-  async fetch(_, env) {
+  async fetch(request, env) {
     const decapConfigUrl = env.DECAP_CONFIG_URL;
+    const githubToken = env.GITHUB_TOKEN;
+
+    const url = new URL(request.url);
+    if (url.pathname === "/auth") {
+      const provider = "github";
+      const responseBody = renderBody("success", {
+        token: githubToken,
+        provider,
+      });
+      return new Response(responseBody, {
+        headers: {
+          "content-type": "text/html;charset=UTF-8",
+        },
+        status: 200,
+      });
+    }
 
     const response = await fetch(decapConfigUrl);
     const ymlText = await response.text();
     const decapJsonConfig = parse(ymlText);
+
+    if (!decapJsonConfig.backend) {
+      decapJsonConfig.backend = {};
+    }
+
+    decapJsonConfig.backend.name = "github";
+    decapJsonConfig.backend.auth_endpoint = "/auth";
 
     const html = /*html*/ `
     <!DOCTYPE html>

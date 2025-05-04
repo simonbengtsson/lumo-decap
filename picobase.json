@@ -2,5 +2,15 @@
   "name": "Picobase Decap",
   "identifier": "co.picobase.decap",
   "subtitle": "Decap CMS for Picobase",
-  "description": "Decap CMS for Picobase"
+  "description": "Decap CMS for Picobase",
+  "installationEnv": [
+    {
+      "name": "Decap Config URL",
+      "env": "DECAP_CONFIG_URL"
+    },
+    {
+      "name": "Personal Github Token",
+      "env": "GITHUB_TOKEN"
+    }
+  ]
 }
