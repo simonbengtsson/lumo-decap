@@ -1,0 +1,19 @@
+backend:
+  name: github
+  branch: main
+  repo: simonbengtsson/decap-picobase-vitepress
+
+media_folder: public/img
+public_folder: /img
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "/"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
