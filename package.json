@@ -1,0 +1,19 @@
+{
+  "name": "picobase-decap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "echo 'build'",
+    "picobase-build": "rm -rf dist && npm run build && npm run wrangler-dry-build && cp picobase.json dist/ && cp -r build/client dist/public && npm run make-pbapp",
+    "wrangler-dry-build": "wrangler deploy --dry-run --bundle --outdir dist",
+    "make-pbapp": "cd dist && zip -r ./app.pbapp . && mv ./app.pbapp ../"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "wrangler": "^4.14.1"
+  }
+}
