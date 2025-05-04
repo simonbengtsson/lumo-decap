@@ -1,5 +1,13 @@
+import { parse } from "yaml";
+
 export default {
-  fetch(_, env) {
+  async fetch(_, env) {
+    const decapConfigUrl = env.DECAP_CONFIG_URL;
+
+    const response = await fetch(decapConfigUrl);
+    const ymlText = await response.text();
+    const decapJsonConfig = parse(ymlText);
+
     const html = /*html*/ `
     <!DOCTYPE html>
     <html>
@@ -10,12 +18,18 @@ export default {
         <title>Content Manager</title>
     </head>
     <body>
-        <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+      <script>window.CMS_MANUAL_INIT = true</script>
+      <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+      <script type="module">
+        const { CMS, initCMS } = window
+        initCMS({
+            config: ${JSON.stringify(decapJsonConfig)},
+        })
+      </script>
     </body>
     </html>
     `;
 
-    const githubToken = env.GITHUB_TOKEN;
     return new Response(html, {
       headers: {
         "Content-Type": "text/html",
