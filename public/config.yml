@@ -7,9 +7,9 @@ media_folder: public/img
 public_folder: /img
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "/"
+  - name: "site"
+    label: "Site"
+    folder: "site"
     create: true
     slug: "{{slug}}"
     editor:
