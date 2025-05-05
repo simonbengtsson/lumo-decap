@@ -1,23 +1,25 @@
 {
+  "private": true,
   "name": "picobase-decap",
-  "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "dev": "wrangler dev",
-    "build": "echo 'build'",
+    "dev": "wrangler dev --assets public",
+    "build": "npx esbuild src/client.ts --outfile=public/client.js --bundle --loader:.js=jsx",
     "picobase-build": "rm -rf dist && npm run build && npm run wrangler-dry-build && cp picobase.json dist/ && cp -r public dist/public && npm run make-pbapp",
     "wrangler-dry-build": "wrangler deploy --dry-run --bundle --outdir dist",
     "make-pbapp": "cd dist && zip -r ./app.pbapp . && mv ./app.pbapp ../ && cd .. && rm -rf dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "wrangler": "^4.14.1"
+  "browser": {
+    "path": "path-browserify"
   },
   "dependencies": {
     "decap-cms": "^3.6.2",
+    "decap-cms-backend-github": "^3.2.2",
+    "decap-cms-lib-util": "^3.0.0",
+    "path-browserify": "^1.0.1",
     "yaml": "^2.7.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.3",
+    "wrangler": "^4.14.1"
   }
 }
