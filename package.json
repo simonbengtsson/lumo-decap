@@ -4,9 +4,9 @@
   "scripts": {
     "dev": "wrangler dev --assets public",
     "build": "npx esbuild src/client.ts --outfile=public/client.js --bundle --loader:.js=jsx",
-    "picobase-build": "rm -rf dist && npm run build && npm run wrangler-dry-build && cp picobase.json dist/ && cp -r public dist/public && npm run make-pbapp",
+    "lumo:build": "rm -rf dist && npm run build && npm run wrangler-dry-build && cp lumobase.json dist/ && cp wrangler.jsonc dist/ && cp -r public dist/public && npm run make-pbapp",
     "wrangler-dry-build": "wrangler deploy --dry-run --bundle --outdir dist",
-    "make-pbapp": "cd dist && zip -r ./app.pbapp . && mv ./app.pbapp ../ && cd .. && rm -rf dist"
+    "make-pbapp": "cd dist && zip -r ./app.pbapp . && mv ./app.pbapp ../ && cd .."
   },
   "browser": {
     "path": "path-browserify"

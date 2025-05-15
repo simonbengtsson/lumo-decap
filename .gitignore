@@ -4,3 +4,4 @@ node_modules
 app.pbapp
 public/client.js
 .DS_Store
+dist

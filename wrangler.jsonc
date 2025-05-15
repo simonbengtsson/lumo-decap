@@ -4,5 +4,11 @@
   "compatibility_date": "2025-05-02",
   "assets": {
     "directory": "public"
-  }
+  },
+  "kv_namespaces": [
+    {
+      "binding": "MAINDB",
+      "id": "-"
+    }
+  ]
 }
