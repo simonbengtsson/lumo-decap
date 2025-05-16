@@ -45,7 +45,9 @@ export default {
           }
         );
       } else if (request.method === "POST") {
+        console.log("POST request!");
         const formData = await request.formData();
+        console.log("Form data", formData);
         const decapConfigUrl = formData.get("decapConfigUrl");
         const githubToken = formData.get("githubToken");
 
@@ -79,7 +81,7 @@ export default {
       decapJsonConfig.backend = {};
     }
 
-    decapJsonConfig.backend.name = "picobase";
+    decapJsonConfig.backend.name = "lumobase";
     decapJsonConfig.load_config_file = false;
     decapJsonConfig.githubToken = githubToken;
 

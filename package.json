@@ -1,12 +1,12 @@
 {
   "private": true,
-  "name": "picobase-decap",
+  "name": "lumobase-decap",
   "scripts": {
     "dev": "wrangler dev --assets public",
     "build": "npx esbuild src/client.ts --outfile=public/client.js --bundle --loader:.js=jsx",
-    "lumo:build": "rm -rf dist && npm run build && npm run wrangler-dry-build && cp lumobase.json dist/ && cp wrangler.jsonc dist/ && cp -r public dist/public && npm run make-pbapp",
+    "lumo:build": "rm -rf dist && npm run build && npm run wrangler-dry-build && cp lumobase.json dist/ && cp wrangler.jsonc dist/ && cp -r public dist/public && npm run make-app",
     "wrangler-dry-build": "wrangler deploy --dry-run --bundle --outdir dist",
-    "make-pbapp": "cd dist && zip -r ./app.pbapp . && mv ./app.pbapp ../ && cd .."
+    "make-app": "cd dist && zip -r ./app.lumo . && mv ./app.lumo ../ && cd .."
   },
   "browser": {
     "path": "path-browserify"

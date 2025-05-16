@@ -12,7 +12,7 @@ import {
   User,
 } from "decap-cms-lib-util";
 
-class PicobaseBackend implements Implementation {
+class LumobaseBackend implements Implementation {
   githubBackend: GitHubBackend;
   config: Config & { githubToken: string };
 
@@ -37,7 +37,7 @@ class PicobaseBackend implements Implementation {
   }
 
   logout() {
-    location.href = "https://picobase.co";
+    location.href = "https://lumobase.co";
   }
   authComponent() {
     return (props: any) => {
@@ -51,8 +51,8 @@ class PicobaseBackend implements Implementation {
   authenticate(credentials: Credentials) {
     const user = {
       ...credentials,
-      backendName: "picobase",
-      name: "Picobase User",
+      backendName: "lumobase",
+      name: "Lumo User",
     };
     return Promise.resolve(user);
   }
@@ -163,7 +163,7 @@ class PicobaseBackend implements Implementation {
 }
 
 const { CMS, DECAP_CONFIG } = window as any;
-CMS.registerBackend("picobase", PicobaseBackend);
+CMS.registerBackend("lumobase", LumobaseBackend);
 CMS.init({
   config: DECAP_CONFIG,
 });
