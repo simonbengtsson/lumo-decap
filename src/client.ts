@@ -37,8 +37,9 @@ class LumobaseBackend implements Implementation {
   }
 
   logout() {
-    location.href = "https://lumobase.co";
+    location.href = "https://lumoapps.me";
   }
+  
   authComponent() {
     return (props: any) => {
       props.onLogin();
