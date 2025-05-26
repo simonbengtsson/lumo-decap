@@ -12,7 +12,7 @@ import {
   User,
 } from "decap-cms-lib-util";
 
-class LumobaseBackend implements Implementation {
+class LumoBackend implements Implementation {
   githubBackend: GitHubBackend;
   config: Config & { githubToken: string };
 
@@ -52,7 +52,7 @@ class LumobaseBackend implements Implementation {
   authenticate(credentials: Credentials) {
     const user = {
       ...credentials,
-      backendName: "lumobase",
+      backendName: "lumo",
       name: "Lumo User",
     };
     return Promise.resolve(user);
@@ -164,7 +164,7 @@ class LumobaseBackend implements Implementation {
 }
 
 const { CMS, DECAP_CONFIG } = window as any;
-CMS.registerBackend("lumobase", LumobaseBackend);
+CMS.registerBackend("lumo", LumoBackend);
 CMS.init({
   config: DECAP_CONFIG,
 });
