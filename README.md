@@ -1,4 +1,4 @@
-# Lumo Decap
+# Decap CMS as Lumo app
 
 This is a custom version Decap CMS adapted to run as a Lumo app (basically a custom Lumo backend). Use it to edit your website content without having to setup autentication for your Decap instance. You don't even have to add Decap CMS to your website (just a decap config file in your Github repository).
 
