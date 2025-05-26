@@ -8,6 +8,8 @@ Current limitations
 
 ## How to use
 
+You can either go to the [installation url](https://lumoapps.me/dash?appUrl=https%3A%2F%2Fgithub.com%2Fsimonbengtsson%2Flumo-decap%2Freleases%2Flatest%2Fdownload%2Fapp.lumo) or install it manually:
+
 1. Go to [Lumo Apps](https://lumoapps.me) and login
 2. Go to the latest release in this repo and download the `app.lumo` file
 3. Upload the app.lumo file and install it on 
