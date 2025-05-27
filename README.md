@@ -10,7 +10,7 @@ Current limitations
 
 You can either go to the [installation url](https://lumoapps.me/dash?appUrl=https%3A%2F%2Fgithub.com%2Fsimonbengtsson%2Flumo-decap%2Freleases%2Flatest%2Fdownload%2Fapp.lumo) or install it manually:
 
-1. Go to [Lumo Apps](https://lumoapps.me) and login
+1. Go to [lumoapps.me](https://lumoapps.me) and login
 2. Go to the latest release in this repo and download the `app.lumo` file
 3. Upload the app.lumo file and install it on 
 4. Open the Lumo Decap app and follow the setup instructions (you need to add a github personal api token and pick a Github repsitory with the content you want to edit)
