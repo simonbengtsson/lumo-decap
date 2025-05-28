@@ -1,6 +1,6 @@
 # Decap CMS as Lumo app
 
-This is a custom version Decap CMS adapted to run as a Lumo app. Use it to edit your website content without having to setup autentication for your Decap instance. You don't even have to add the Decap CMS files to your website (just add a decapconfig.yml file with your decap config to your website repository).
+This is a custom version Decap CMS that can run as a Lumobase app. Use it to edit website content in a Github repository without having to setup Decap CMS yourself - just add a decapconfig.yml file.
 
 Limitations
 - Website content need to be in a Github repository (Gitlab etc not supported)
