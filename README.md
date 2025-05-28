@@ -7,8 +7,6 @@ Limitations
 
 ## How to use
 
-You can either go to the [installation url](https://lumoapps.me/dash?appUrl=https%3A%2F%2Fgithub.com%2Fsimonbengtsson%2Flumo-decap%2Freleases%2Flatest%2Fdownload%2Fapp.lumo) or install it manually:
-
 1. Login to Lumobase at [lumoapps.me](https://lumoapps.me)
 2. Install the app [Install Lumo Decap](https://lumoapps.me/dash?appUrl=https%3A%2F%2Fgithub.com%2Fsimonbengtsson%2Flumo-decap%2Freleases%2Flatest%2Fdownload%2Fapp.lumo)
 3. Open the Lumo Decap app and follow the setup instructions (you need to add a Github personal api token and pick a Github repsitory with the website content you want to edit and a decapconfig.yml file)
