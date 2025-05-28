@@ -6,8 +6,8 @@ This is a custom version Decap CMS that can run as a Lumobase app. Use it to edi
 
 1. Setup your website and add a decapconfig.yml file (here is an [example Vitepress site](https://github.com/simonbengtsson/lumo-decap-vitepress), but it can be any site supported by Decap)
 2. Login to Lumobase at [lumoapps.me](https://lumoapps.me)
-3. Install this app [Install Lumo Decap](https://lumoapps.me/dash?appUrl=https%3A%2F%2Fgithub.com%2Fsimonbengtsson%2Flumo-decap%2Freleases%2Flatest%2Fdownload%2Fapp.lumo)
-4. Open the Lumo Decap CMS app and follow the setup instructions
+3. Install this app on Lumobase [Install Decap CMS](https://lumoapps.me/dash?appUrl=https%3A%2F%2Fgithub.com%2Fsimonbengtsson%2Flumo-decap%2Freleases%2Flatest%2Fdownload%2Fapp.lumo)
+4. Open the app and follow the setup instructions
 
 ## Development
 
