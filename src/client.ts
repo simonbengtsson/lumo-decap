@@ -53,7 +53,7 @@ class LumoBackend implements Implementation {
     const user = {
       ...credentials,
       backendName: "lumo",
-      name: "Lumo User",
+      name: "Lumobase User",
     };
     return Promise.resolve(user);
   }

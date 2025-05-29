@@ -11,4 +11,4 @@ This is a custom version Decap CMS that can run as a Lumobase app. Use it to edi
 
 ## Development
 
-You can run the app locally with `npm run dev` and create a new lumo app file with `npm run build:lumo`.
+You can run the app locally with `npm run dev` and create a new app file with `npm run build:lumo`.

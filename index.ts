@@ -137,7 +137,7 @@ async function fetchGithubFileContent(
     headers: {
       Authorization: `Bearer ${githubToken}`,
       Accept: "application/vnd.github.v3.raw",
-      "User-Agent": "Lumo Decap CMS",
+      "User-Agent": "Lumobase Decap CMS",
     },
   });
 
