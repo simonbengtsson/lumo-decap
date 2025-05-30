@@ -1,6 +1,8 @@
 {
   "name": "Decap CMS",
   "subtitle": "Edit website content with Decap CMS",
+  "repository": "https://github.com/simonbengtsson/lumo-decap",
+  "icon": "public/icon.png",
   "services": [
     {
       "type": "cloudflare-kv",
