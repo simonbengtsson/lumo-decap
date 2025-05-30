@@ -1,5 +1,11 @@
 {
   "name": "Decap CMS",
   "identifier": "me.lumoapps.decap",
-  "subtitle": "Edit website content with Decap CMS"
+  "subtitle": "Edit website content with Decap CMS",
+  "services": [
+    {
+      "binding": "MAINDB",
+      "type": "cloudflare-kv"
+    }
+  ]
 }
