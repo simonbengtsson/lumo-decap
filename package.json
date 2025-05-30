@@ -4,9 +4,9 @@
   "scripts": {
     "dev": "wrangler dev --assets public",
     "build:client": "npx esbuild src/client.ts --outfile=public/client.js --bundle --loader:.js=jsx",
-    "build:lumo": "rm -rf dist && npm run build:client && npm run wrangler-dry-build && cp lumobase.jsonc dist/ && cp wrangler.jsonc dist/ && cp -r public dist/public && npm run make-app",
+    "build:lumo": "rm -rf dist app.lumo && npm run build:client && npm run wrangler-dry-build && cp -r lumobase.jsonc public dist/ && npm run make-app",
     "wrangler-dry-build": "wrangler deploy --dry-run --bundle --outdir dist",
-    "make-app": "cd dist && zip -r ./app.lumo . && mv ./app.lumo ../ && cd .."
+    "make-app": "cd dist && zip -r ./app.lumo . && mv ./app.lumo ../"
   },
   "browser": {
     "path": "path-browserify"
