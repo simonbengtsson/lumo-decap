@@ -39,7 +39,7 @@ class LumoBackend implements Implementation {
   logout() {
     location.href = "https://lumobase.co";
   }
-  
+
   authComponent() {
     return (props: any) => {
       props.onLogin();
@@ -58,7 +58,7 @@ class LumoBackend implements Implementation {
     return Promise.resolve(user);
   }
 
-  // Github backend
+  // GitHub backend
 
   isGitBackend() {
     return true;

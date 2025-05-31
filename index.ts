@@ -143,7 +143,7 @@ async function fetchGithubFileContent(
 
   if (!response.ok) {
     throw new AppError(
-      `Could not fetch ${filename} from Github. Please check the repository URL and token and try again.`
+      `Could not fetch ${filename} from GitHub. Please check the repository URL and token and try again.`
     );
   }
 
@@ -179,11 +179,11 @@ function getSetupHtml(request: Request) {
     }
       <h1 style="margin-bottom: 0;">Setup Decap CMS</h1>
       <p style="margin-top: 0;">
-        Before you continue you need a website in a Github repository that preferably deploys when new commits are pushed. You can check <a href="https://github.com/simonbengtsson/lumo-decap-vitepress?tab=readme-ov-file#vitepress-with-decap-cms-as-lumo-app" target="_blank">this README</a> for example instructions.
+        Before you continue you need a website in a GitHub repository that preferably deploys when new commits are pushed. You can check <a href="https://github.com/simonbengtsson/lumo-decap-vitepress?tab=readme-ov-file#vitepress-with-decap-cms-as-lumo-app" target="_blank">this README</a> for example instructions.
       </p>
       <form method="POST">
       <div>
-        <label for="githubRepository"><strong>Github Repository URL</strong></label><br>
+        <label for="githubRepository"><strong>GitHub Repository URL</strong></label><br>
         <input style="width: 100%;" type="text" name="githubRepository" required />
         <p>
           Full URL to the public or private repository of your website. There should be a <code>decapconfig.yml</code> file at the root, but no decap <code>/admin</code> folder is needed.
@@ -191,7 +191,7 @@ function getSetupHtml(request: Request) {
       </div>
       <br>
       <div>
-        <label for="githubToken"><strong>Github Personal Token</strong></label><br>
+        <label for="githubToken"><strong>GitHub Personal Token</strong></label><br>
         <input style="width: 100%;" type="text" name="githubToken" required />
         <p>
           The only permission required is the "Contents" permission under "Repository permissions". You can create a new token on the <a href="https://github.com/settings/personal-access-tokens/new" target="_blank">create new token</a> page.
